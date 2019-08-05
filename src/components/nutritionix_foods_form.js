@@ -62,7 +62,7 @@ class NutritionixForm extends Component {
   handleCreateConsumption = e => {
     e.preventDefault()
 
-    fetch("http://localhost:3000/consumptions", {
+    fetch("https://sleepy-beach-71455.herokuapp.com/consumptions", {
       method: "POST",
       headers: {
         Accept: "application/json",
