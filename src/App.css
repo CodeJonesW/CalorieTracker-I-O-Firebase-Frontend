@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+}
+
+#signInpage {
+  background: url(./images/wide_shot.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
+#navBarSignedOut {
+  background-color: rgba(31, 58, 147, 1);
+}
+
+#myButton {
+  background-color: rgba(31, 58, 147, 1);
+  border-color: rgba(31, 58, 147, 1);
+  /* border-radius: 5px; */
+}
+
+#quote {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 12pt;
+}
+
+#quoteAuthor {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 9pt;
+}
