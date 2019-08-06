@@ -15,15 +15,20 @@ class DeleteActivityForm extends Component {
   handleDeleteActivity = e => {
     e.preventDefault()
 
-    fetch(`http://localhost:3000/activities/${e.target.activityId.value}`, {
-      method: "DELETE",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage.jwt_token}`
-      },
-      body: JSON.stringify({})
-    })
+    fetch(
+      `https://sleepy-beach-71455.herokuapp.com/activities/${
+        e.target.activityId.value
+      }`,
+      {
+        method: "DELETE",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.jwt_token}`
+        },
+        body: JSON.stringify({})
+      }
+    )
       .then(res => res.json())
       .then(res => {
         if (res.user) {

@@ -15,15 +15,18 @@ class DeleteGoalForm extends Component {
   handleDeleteGoal = e => {
     e.preventDefault()
 
-    fetch(`http://localhost:3000/goals/${e.target.goalId.value}`, {
-      method: "DELETE",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage.jwt_token}`
-      },
-      body: JSON.stringify({})
-    })
+    fetch(
+      `https://sleepy-beach-71455.herokuapp.com/goals/${e.target.goalId.value}`,
+      {
+        method: "DELETE",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.jwt_token}`
+        },
+        body: JSON.stringify({})
+      }
+    )
       .then(res => res.json())
       .then(res => {
         if (res.user) {

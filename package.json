@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://calorietracker-i-o.firebaseapp.com/",
+  "homepage": "https://calorietracker-i-o.web.app",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "chart.js": "^2.8.0",

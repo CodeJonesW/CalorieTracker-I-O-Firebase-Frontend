@@ -16,7 +16,9 @@ class DeleteConsumptionForm extends Component {
     e.preventDefault()
 
     fetch(
-      `http://localhost:3000/consumptions/${e.target.consumptionId.value}`,
+      `https://sleepy-beach-71455.herokuapp.com/consumptions/${
+        e.target.consumptionId.value
+      }`,
       {
         method: "DELETE",
         headers: {
