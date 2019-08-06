@@ -135,10 +135,6 @@ class LoginForm extends React.Component {
             </Col>
             <Col md={2} className="m-1" />
             <Col md={4}>
-              <p id="quote" className="m-2">
-                “The future depends on what you do today.”
-              </p>
-              <p id="quoteAuthor">-Mahatma Gandhi</p>
               <Fade in={this.state.visible}>
                 <Form
                   onSubmit={e => this.handleSignUp(e)}

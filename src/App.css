@@ -22,9 +22,11 @@
 #quote {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 12pt;
+  color: white;
 }
 
 #quoteAuthor {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 9pt;
+  color: white;
 }

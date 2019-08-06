@@ -61,6 +61,13 @@ class MyNavBar extends React.Component {
 
             <NavbarBrand href="/">Calorie Tracker I/O</NavbarBrand>
             <NavbarToggler />
+            <Nav navbar className="ml-auto">
+              <NavItem>
+                <p id="quote" className="m-2">
+                  “The future depends on what you do today.” -Mahatma Gandhi
+                </p>
+              </NavItem>
+            </Nav>
           </Navbar>
         ) : (
           // theme="primary"
