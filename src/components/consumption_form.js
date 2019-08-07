@@ -77,9 +77,8 @@ class ConsumptionForm extends Component {
             <FormInput
               required="true"
               type="number"
-              min="1"
+              min="0"
               max="4000"
-              step="10"
               name="calories_intaken"
               id="#calories_intaken"
               placeholder="Calories Consumed"

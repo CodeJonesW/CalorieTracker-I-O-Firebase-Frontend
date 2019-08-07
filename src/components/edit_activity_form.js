@@ -96,7 +96,6 @@ class EditActivityForm extends Component {
               type="number"
               min="0"
               max="5000"
-              step="10"
               name="calories_burned"
               id="#calories_burned"
               placeholder="# Calories Burned"

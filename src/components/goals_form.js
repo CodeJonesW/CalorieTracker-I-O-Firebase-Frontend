@@ -82,7 +82,6 @@ class GoalForm extends Component {
               type="number"
               min="0"
               max="5000"
-              step="10"
               name="calories_to_burn"
               id="#calories_to_burn"
               placeholder="# Calories to Burn"

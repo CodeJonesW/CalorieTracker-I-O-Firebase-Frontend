@@ -3,7 +3,6 @@ import { Form, FormInput, FormGroup } from "shards-react"
 import { Button, Fade } from "shards-react"
 import { connect } from "react-redux"
 import { Redirect } from "react-router-dom"
-import { fetchUser } from "../actions/user_actions"
 import { Card } from "react-bootstrap"
 
 class NutritionixForm extends Component {
