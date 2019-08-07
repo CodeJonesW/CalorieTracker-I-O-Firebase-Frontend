@@ -205,7 +205,7 @@ class LoginForm extends React.Component {
                       min="0"
                       max="8"
                       name="heightfeet"
-                      id="#signupheight"
+                      id="#signupheightfeet"
                       placeholder="Height in Feet"
                     />
                   </FormGroup>
@@ -215,7 +215,7 @@ class LoginForm extends React.Component {
                       min="0"
                       max="11"
                       name="heightinches"
-                      id="#signupheight"
+                      id="#signupheightinches"
                       placeholder="Height in Inches"
                     />
                   </FormGroup>
