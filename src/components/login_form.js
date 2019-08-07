@@ -39,7 +39,6 @@ class LoginForm extends React.Component {
       })
         .then(res => res.json())
         .then(res => {
-          //   console.log(res)
           if (res.jwt) {
             localStorage.setItem("jwt_token", res.jwt)
             this.props.dispatch({ type: "UPDATE_USER", user: res.user })
@@ -58,7 +57,7 @@ class LoginForm extends React.Component {
   handleSignUp = e => {
     e.preventDefault()
     if (e.target.email.value && e.target.password.value) {
-      let height = e.target.height.value
+      let height = e.target.heightfeet.value + "'" + e.target.heightinches.value
       fetch("https://sleepy-beach-71455.herokuapp.com/signup", {
         method: "POST",
         headers: {
@@ -203,10 +202,21 @@ class LoginForm extends React.Component {
                   <FormGroup>
                     <FormInput
                       type="number"
-                      step="0.1"
-                      name="height"
-                      id="#signupheight"
-                      placeholder="Height"
+                      min="0"
+                      max="8"
+                      name="heightfeet"
+                      id="#signupheightfeet"
+                      placeholder="Height in Feet"
+                    />
+                  </FormGroup>
+                  <FormGroup>
+                    <FormInput
+                      type="number"
+                      min="0"
+                      max="11"
+                      name="heightinches"
+                      id="#signupheightinches"
+                      placeholder="Height in Inches"
                     />
                   </FormGroup>
                   <FormGroup>

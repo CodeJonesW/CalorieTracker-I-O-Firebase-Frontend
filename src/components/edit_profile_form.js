@@ -4,7 +4,6 @@ import { Button, ButtonGroup } from "shards-react"
 import { NavLink } from "react-router-dom"
 import { connect } from "react-redux"
 import { Redirect } from "react-router-dom"
-import { fetchUser } from "../actions/user_actions"
 import SplashEditProfileDiv from "../components/splash_edit_profile"
 
 class EditProfileForm extends Component {
@@ -14,7 +13,7 @@ class EditProfileForm extends Component {
 
   handleEditProfile = e => {
     e.preventDefault()
-    let height = e.target.height.value
+    let height = e.target.heightfeet.value + "'" + e.target.heightinches.value
     fetch(
       `https://sleepy-beach-71455.herokuapp.com/users/${
         this.props.userInfo.id
@@ -135,11 +134,23 @@ class EditProfileForm extends Component {
             <FormGroup>
               <FormInput
                 type="number"
-                step="0.1"
-                name="height"
-                id="#height"
-                placeholder="Height"
-                defaultValue={this.props.userInfo.height}
+                min="0"
+                max="8"
+                name="heightfeet"
+                id="#signupheightfeet"
+                placeholder="Height in Feet"
+                defaultValue={this.props.userInfo.height.split("'")[0]}
+              />
+            </FormGroup>
+            <FormGroup>
+              <FormInput
+                type="number"
+                min="0"
+                max="11"
+                name="heightinches"
+                id="#signupheightinches"
+                placeholder="Height in Inches"
+                defaultValue={this.props.userInfo.height.split("'")[1]}
               />
             </FormGroup>
             <FormGroup>

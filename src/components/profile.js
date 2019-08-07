@@ -118,7 +118,9 @@ class Profile extends React.Component {
                 <Card.Title>
                   Your BMR:{" "}
                   {this.props.userInfo.special.basal_metabolic_rate
-                    ? this.props.userInfo.special.basal_metabolic_rate
+                    ? this.props.userInfo.special.basal_metabolic_rate.toFixed(
+                        0
+                      )
                     : "Enter your age, weight, and height to calculate your BMR!"}
                 </Card.Title>
                 <Card.Text>
