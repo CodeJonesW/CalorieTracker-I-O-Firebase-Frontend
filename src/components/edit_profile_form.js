@@ -14,7 +14,7 @@ class EditProfileForm extends Component {
 
   handleEditProfile = e => {
     e.preventDefault()
-    let height = e.target.height.value
+    let height = e.target.heightfeet.value + "'" + e.target.heightinches.value
     fetch(
       `https://sleepy-beach-71455.herokuapp.com/users/${
         this.props.userInfo.id
@@ -135,11 +135,21 @@ class EditProfileForm extends Component {
             <FormGroup>
               <FormInput
                 type="number"
-                step="0.1"
-                name="height"
-                id="#height"
-                placeholder="Height"
-                defaultValue={this.props.userInfo.height}
+                min="0"
+                max="8"
+                name="heightfeet"
+                id="#signupheight"
+                placeholder="Height in Feet"
+              />
+            </FormGroup>
+            <FormGroup>
+              <FormInput
+                type="number"
+                min="0"
+                max="11"
+                name="heightinches"
+                id="#signupheight"
+                placeholder="Height in Inches"
               />
             </FormGroup>
             <FormGroup>
