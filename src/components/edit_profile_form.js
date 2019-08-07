@@ -4,7 +4,6 @@ import { Button, ButtonGroup } from "shards-react"
 import { NavLink } from "react-router-dom"
 import { connect } from "react-redux"
 import { Redirect } from "react-router-dom"
-import { fetchUser } from "../actions/user_actions"
 import SplashEditProfileDiv from "../components/splash_edit_profile"
 
 class EditProfileForm extends Component {
@@ -138,8 +137,9 @@ class EditProfileForm extends Component {
                 min="0"
                 max="8"
                 name="heightfeet"
-                id="#signupheight"
+                id="#signupheightfeet"
                 placeholder="Height in Feet"
+                defaultValue={this.props.userInfo.height.split("'")[0]}
               />
             </FormGroup>
             <FormGroup>
@@ -148,8 +148,9 @@ class EditProfileForm extends Component {
                 min="0"
                 max="11"
                 name="heightinches"
-                id="#signupheight"
+                id="#signupheightinches"
                 placeholder="Height in Inches"
+                defaultValue={this.props.userInfo.height.split("'")[1]}
               />
             </FormGroup>
             <FormGroup>
