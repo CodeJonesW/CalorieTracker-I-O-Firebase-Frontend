@@ -1,4 +1,5 @@
 # CalorieTracker_I-O
+Final Solo Project for Flatiron School Web Development Immersive
 Allows users to track exercise activities in relation to the calories consumed through meals on a daily, weekly, monthly, 
 and yearly basis.
 
